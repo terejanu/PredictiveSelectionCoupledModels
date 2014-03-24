@@ -1,6 +1,6 @@
 ## Predictive Selection of Coupled Models
 
-This is an application framework for solving the problem of
+This is a C++ application framework for solving the problem of
 predictive model selection of coupled models as presented in the 
 following paper:
 

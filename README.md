@@ -35,15 +35,16 @@ This package uses GNU Autoconf system for configuration. Please provide
 the installation location $INSTALL_DIR, and the location where QUESO
 is installed, $QUESO_DIR.
 
+```
 $ ./bootstrap
-
 $ ./configure --prefix=$INSTALL_DIR --with-queso=$QUESO_DIR
+```
 
 To build, check and install the software type the following commands.
 Note that "make check" is optional. 
 
+```
 $ make
-
 $ make check
-
-$ make install 
+$ make install
+``` 

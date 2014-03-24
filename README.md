@@ -1,4 +1,4 @@
-Predictive Selection of Coupled Models
+## Predictive Selection of Coupled Models
 =======================
 
 This is an application framework for solving the problem of
@@ -14,7 +14,7 @@ The framework is built on top of the statistical library QUESO
 (Quantification of Uncertainty for Estimation, Simulation and Optimization):
 https://red.ices.utexas.edu/projects/software/wiki/QUESO
 
-Dependencies
+## Dependencies
 =======================
 
 This software is dependent on QUESO 0.46 or later, which needs to 
@@ -28,7 +28,7 @@ option --enable-ann=yes.
 Other dependencies are similar with QUESO's dependencies, namely:
 MPI, GSL, BOOST, GLPK, and HDF5.
 
-Installation
+## Installation
 =======================
 
 This package uses GNU Autoconf system for configuration. Please provide

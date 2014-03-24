@@ -5,8 +5,8 @@ This is an application framework for solving the problem of
 predictive model selection of coupled models as presented in the 
 following paper:
 
-Gabriel Terejanu, Todd Oliver, Chris Simmons (2011). Application of 
-Predictive Model Selection to Coupled Models. In Proceedings of the World 
+Gabriel Terejanu, Todd Oliver, Chris Simmons (2011). "Application of 
+Predictive Model Selection to Coupled Models". In Proceedings of the World 
 Congress on Engineering and Computer Science 2011 Vol II, WCECS 2011, 
 pp. 927-932.
 
@@ -36,11 +36,14 @@ the installation location $INSTALL_DIR, and the location where QUESO
 is installed, $QUESO_DIR.
 
 $ ./bootstrap
+
 $ ./configure --prefix=$INSTALL_DIR --with-queso=$QUESO_DIR
 
 To build, check and install the software type the following commands.
 Note that "make check" is optional. 
 
 $ make
+
 $ make check
+
 $ make install 

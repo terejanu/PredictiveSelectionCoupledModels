@@ -1,0 +1,107 @@
+###############################################
+## UQ Environment
+################################################
+#env_help                 = anything
+env_numSubEnvironments   = 1
+env_subDisplayFileName   = outputData/display
+env_subDisplayAllowAll   = 0
+env_subDisplayAllowedSet = 0
+env_displayVerbosity     = 0
+env_syncVerbosity        = 0
+env_seed                 = 1
+
+################################################
+## Statistical inverse problem (ip)
+################################################
+ip_help                 = anything
+ip_computeSolution      = 1
+ip_dataOutputFileName   = outputData/sipOutput
+ip_dataOutputAllowedSet = 0
+
+################################################
+## 'ip_': information for Multilevel algorithm
+################################################
+ip_ml_help                 = anything
+ip_ml_dataOutputFileName   = outputData/sipOutput_ml
+ip_ml_dataOutputAllowedSet = 0 1
+
+################################################
+## All levels, unless otherwise specified
+################################################
+ip_ml_default_help=xyz
+ip_ml_default_rawChain_size = 2000
+ip_ml_default_rawChain_dataOutputFileName = outputData/rawChain_ml
+ip_ml_0_rawChain_dataOutputFileName = outputData/rawChain_ml
+
+ip_ml_default_scaleCovMatrix                      = 1
+ip_ml_default_dr_maxNumExtraStages                = 0
+
+################################################
+## Last level (level 4 for 'example_gsl' executable)
+################################################
+ip_ml_last_dataOutputFileName                  = outputData/sipOutput_ml
+ip_ml_last_dataOutputAllowedSet                = 0  1
+ip_ml_last_rawChain_size                       = 5000
+ip_ml_last_rawChain_computeStats               = 1
+ip_ml_last_rawChain_dataOutputFileName         = outputData/rawChain_ml
+ip_ml_last_rawChain_stats_kde_compute          = 1
+ip_ml_last_rawChain_stats_kde_numEvalPositions = 100
+ip_ml_last_rawChain_stats_covMatrix_compute    = 1
+ip_ml_last_rawChain_stats_corrMatrix_compute   = 1
+
+ip_ml_last_putOutOfBoundsInChain               = 1
+ip_ml_last_scaleCovMatrix                      = 1
+ip_ml_last_dr_maxNumExtraStages                = 0
+
+###############################################
+## Statistical forward problem (fp)
+################################################
+#fp_help                 = anything
+#fp_computeSolution      = 1
+#fp_computeCovariances   = 1
+#fp_computeCorrelations  = 1
+#fp_dataOutputFileName   = outputData/sfpOutput
+#fp_dataOutputAllowedSet = 0 1
+#
+################################################
+## 'fp_': information for Monte Carlo algorithm
+################################################
+fp_mc_help                 = anything
+fp_mc_dataOutputFileName   = outputData/sfpOutput
+fp_mc_dataOutputAllowedSet = 0 1
+#
+fp_mc_pseq_dataOutputFileName   = outputData/fp_p_seq
+fp_mc_pseq_dataOutputAllowedSet = 0 1
+fp_mc_pseq_computeStats         = 0
+#
+#fp_mc_pseq_stats_help                      = anything
+fp_mc_pseq_stats_initialDiscardedPortions  = 0.
+fp_mc_pseq_stats_hist_compute              = 1
+fp_mc_pseq_stats_hist_numInternalBins      = 100
+fp_mc_pseq_stats_kde_compute               = 1
+fp_mc_pseq_stats_kde_numEvalPositions      = 100
+fp_mc_pseq_stats_covMatrix_compute         = 1
+fp_mc_pseq_stats_corrMatrix_compute        = 1
+
+fp_mc_qseq_size                 = 5000
+fp_mc_qseq_displayPeriod        = 100
+fp_mc_qseq_measureRunTimes      = 1
+fp_mc_qseq_dataOutputFileName   = outputData/fp_q_seq
+fp_mc_qseq_dataOutputAllowedSet = 0 1
+fp_mc_qseq_computeStats         = 1
+
+#fp_mc_qseq_stats_help                      = anything
+fp_mc_qseq_stats_initialDiscardedPortions  = 0.
+fp_mc_qseq_stats_autoCorr_computeViaFft    = 1
+fp_mc_qseq_stats_autoCorr_secondLag        = 2
+fp_mc_qseq_stats_autoCorr_lagSpacing       = 1
+fp_mc_qseq_stats_autoCorr_numLags          = 15
+fp_mc_qseq_stats_autoCorr_display          = 1
+fp_mc_qseq_stats_autoCorr_write            = 1
+fp_mc_qseq_stats_hist_compute              = 1
+fp_mc_qseq_stats_hist_numInternalBins      = 100
+fp_mc_qseq_stats_kde_compute               = 1
+fp_mc_qseq_stats_kde_numEvalPositions      = 100
+fp_mc_qseq_stats_covMatrix_compute         = 1
+fp_mc_qseq_stats_corrMatrix_compute        = 1
+#
